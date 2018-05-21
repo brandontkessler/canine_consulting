@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+	<title>Canine Consulting Login Page</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/register-login.css">
+<% include ./partials/navbar %>
+
+
+	<div id="form-body">
+		<div class="form-container">
+			<h1 class="form-header">Login</h1>
+			<form class="registration-login-form" action="/login" method="post">
+				<label>Email</label>
+				<input type="email" name="username" required>
+				<label>Password</label>
+				<input type="password" name="password" required>
+				<button>Submit</button>
+			</form>
+		</div>	
+	</div>
+
+
+<% include ./partials/footer %>

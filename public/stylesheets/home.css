@@ -1,0 +1,113 @@
+/* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+.homepage-header {
+	background-image: url('https://i.imgur.com/azUlPx3.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: calc(100vh - 100px);
+}
+
+.homepage-content {
+	padding-top: 14em;
+	width: 48.75em;
+}
+
+.header-title {
+	text-align: center;
+	color: white;
+	font-size: 3.75em;
+	margin: 0;
+}
+
+/********** Hidden ***********/
+.header-title-small {
+	display: none;
+}
+
+.header-title-2 {
+	color: white;
+	font-size: 3.75em;
+	margin: 0;
+	text-align: center;
+}
+/********** Hidden ***********/
+
+.tagline {
+	margin: 0;
+	color: white;
+	font-size: 2em;
+	margin-bottom: 4em;
+	text-align: center;
+}
+
+.get-started-container {
+	text-align: center;
+}
+
+.get-started {
+	border: 0.125em solid rgba(119, 210, 202, 1);
+	background-color: white;
+	color: rgba(119, 210, 202, 1);
+	text-decoration: none;
+	padding: 0.5em;
+	border-radius: 0.625em;
+	font-size: 1.3em;
+}
+
+.get-started:hover {
+	border: 2px solid white;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+}
+
+@media screen and (max-width: 82.8em){
+	.homepage-content {
+		padding-top: 10.93em;
+	}
+
+	.header-title {
+		display: none;
+	}
+
+	.header-title-small {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 73.75em){
+	.homepage-content {
+		width: 40em;
+	}
+}
+
+@media screen and (max-width: 73.75em){
+	.homepage-content {
+		width: 40em;
+	}
+}
+
+@media screen and (max-width: 41.875em){
+	.homepage-content {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 25em){
+	.homepage-content {
+		padding-top: 50px;
+	}
+
+	.header-title-2 {
+		font-size: 2.5em;
+	}
+
+	.tagline {
+		font-size: 1.5em;
+	}
+
+	.get-started {
+		font-size: 1em;
+	}
+}
+

@@ -1,0 +1,113 @@
+/* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+.classes-background {
+	background-image: url('https://i.imgur.com/2kNJQBa.jpg');
+	background-size: cover
+	background-position: center;
+	padding-top: 25px;
+	color: white;
+	min-height: 1000px;
+	margin-bottom: -19px;
+}
+
+.classes {
+	width: 75%;
+	margin: 20px auto;
+}
+
+.choose-package p {
+	text-align: center;
+	margin: 0;
+	color: white;
+	font-size: 1.4em;
+}
+
+.class-category {
+	border: 2px solid white;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+	text-align: center;
+}
+
+.training-section {
+	overflow: hidden;
+	height: 350px;
+}
+
+.classes-container {
+	width: 360px;
+	overflow: hidden;
+	float: left;
+	margin-right: calc(100% - 360px - 450px);
+}
+
+.classes-list {
+	padding: 0;
+	margin: 0 0 0 10px;
+	list-style: none;
+}
+
+.classes-list li {
+	line-height: 40px;
+	font-size: 1.5em;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.package-name {
+	margin-left: 10px;
+}
+
+.classes-description-container {
+	width: 440px;
+	border-radius: 10px;
+	overflow: hidden;
+	border: 2px solid rgba(119, 210, 202, 1);
+	display: none;
+}
+
+.description-title {
+	text-align: center;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+	margin: 0;
+	padding: 20px;
+}
+
+.classes-description-list {
+	padding: 30px;
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.classes-description-list li {
+	margin: 10px 0;
+	color: white;
+	transition: color 1s ease-out;
+}
+
+.price {
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+}
+
+.classes-separate {
+	margin: 0 auto;
+	width: 100%;
+	opacity: 0;
+}
+
+.selected-button {
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+}
+
+#welcome-home, #age-dont-mean-a-thing, #upperclassman, #hooman-and-me, #reactivity, #socialization, #anxiety {
+	display: none;
+}

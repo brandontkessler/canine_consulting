@@ -1,0 +1,146 @@
+/* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+.method-background {
+	background-image: url('https://i.imgur.com/h5w5M3U.jpg');
+	background-size: cover;
+	height: 800px;
+	padding-top: 20px;
+}
+
+.method-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.blurb {
+	width: 60%;
+	margin: 0 auto;
+	color: white;
+}
+
+.blurb-separate {
+	border: 1px solid rgba(119, 210, 202, 0.8);
+	margin: 70px 0;
+}
+
+
+.boxes-behavior {
+	overflow: hidden;
+}
+
+.box {
+	width: 250px;
+	background-color: rgba(119, 210, 202, 0.7);
+	text-align: center;
+	color: white;
+	padding: 70px 0;
+	float: left;
+	margin-left: calc((100% - 1000px)/5);
+	border-radius: 20px;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.box:hover {
+	color: rgba(119, 210, 202, 1);
+	background-color: white;
+}
+
+.box1 {
+	margin-left: 14.5%;
+}
+
+.boxes-training {
+	overflow: hidden;
+}
+
+.box2 {
+	width: 250px;
+	background-color: rgba(119, 210, 202, 0.7);
+	text-align: center;
+	color: white;
+	padding: 70px 0;
+	float: left;
+	margin-left: calc((100% - 1000px)/5);
+	border-radius: 15px;
+	font-size: 1.5em;
+	cursor: pointer;
+	max-height: 31px;
+}
+
+.box2:hover {
+	background-color: white;
+	color: rgba(119, 210, 202, 1);
+}
+
+.popup-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+
+.popup {
+	margin: 80px auto;
+	width: 1000px;
+	background-color: white;
+	padding: 20px 50px;
+	border: 10px solid rgba(119, 210, 202, 1);
+	border-radius: 10px;
+	overflow: auto;
+	height: 700px;
+}
+
+.x-close-container {
+	overflow: hidden;
+}
+
+.x-close {
+	font-size: 1.5em;
+	float: right;
+	padding: 5px 13.8px;
+	text-align: center;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+	border-radius: 50%;
+	font-family: "Lucida Console", Monaco, monospace;
+	margin: 10px 0 0 0 ;
+	cursor: pointer;
+}
+
+.popup-package-name {
+	text-align: center;
+	color: rgba(119, 210, 202, 1);
+	font-size: 2em;
+	padding: 5px;
+	border: solid 1px rgba(119, 210, 202, 1);
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+.popup-close {
+	margin-left: calc(50% - 50px);
+	width: 100px;
+	height: 50px;
+	color: white;
+	background-color: rgba(119, 210, 202, 1);
+	font-size: 1em;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+}
+
+.popup-close:hover {
+	opacity: 0.7;
+}
+
+.x-close:hover {
+	opacity: 0.7;
+}

@@ -1,0 +1,58 @@
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="stylesheets/navbar.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/footer.css">
+</head>
+<body>
+
+	<div class="navbar">
+		<div id="brand"><a href="/">CCG</a></div>
+		<ul id="navigation">
+			<div class="center-nav">
+				<li class="nav-paw"><i class="fas fa-paw"></i></li>
+				<hr class="nav-hr">
+				<li><a href="/team">Team</a></li>
+				<li class="nav-paw"><i class="fas fa-paw"></i></li>
+				<hr class="nav-hr">
+				<li><a href="/method">Method</a></li>
+				<li class="nav-paw"><i class="fas fa-paw"></i></li>
+				<hr class="nav-hr">
+				<li><a href="/classes">Classes</a></li>
+				<li class="nav-paw"><i class="fas fa-paw"></i></li>
+				<hr class="nav-hr">
+				<li><a href="/schedule">Schedule/Events</a></li>
+				<li class="nav-paw"><i class="fas fa-paw"></i></li>
+			</div>
+			<div class="right-nav">
+				<% if(currentUser){ %>
+					<hr class="nav-hr">
+					<li><a href="/profile">Profile</a></li>
+					<hr class="nav-hr">
+					<li><a href="/signout">Sign Out</a></li>
+				<% } else { %>
+					<hr class="nav-hr">
+					<li><a href="/register">Register</a></li>
+					<hr class="nav-hr">
+					<li><a href="/login">Log In</a></li>
+				<% } %>
+			</div>
+		</ul>
+		<div id="mobile-navigation">
+			<button><i class="fas fa-paw"></i></button>
+		</div>
+	</div>
+
+
+
+	<% if(error && error.length>0){ %>
+		<div class="flash flash-error" role="alert">
+			<%= error %>
+		</div>
+	<% } %>
+	<% if(success && success.length>0){ %>
+		<div class="flash flash-success" role="alert">
+			<%= success %>
+		</div>
+	<% } %>
+
+	<div id="dark-hide"></div>

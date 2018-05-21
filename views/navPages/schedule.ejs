@@ -1,0 +1,64 @@
+<% include ../partials/header %>
+
+	<title>Canine Consulting Classes Page</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/navPages/schedule.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+<% include ../partials/navbar %>
+	<div class="schedule-background">
+		<div class="schedule-container">
+			<p>Bacon ipsum dolor amet filet mignon brisket kevin meatloaf rump short ribs spare ribs tenderloin. Shankle porchetta chuck pork kevin picanha corned beef, meatball capicola t-bone filet mignon swine jerky. Pork beef ribs beef brisket, shoulder fatback tenderloin. Pork loin pork ham hock capicola brisket short loin. Meatloaf sausage cupim bacon, fatback pork chop buffalo burgdoggen. Andouille swine fatback, hamburger corned beef short ribs drumstick.</p>
+
+			<div class="contact-form">
+				<h2>Enrollment Form</h2>
+				<form id="enrollmentForm" action="/enrollment" method="post">
+					<div class="contact-item">
+						<h4 class="input-title">Name of Owner: 
+							<input id="owner-name" class="contact-input" type="text" name="enrollment[ownerName]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Name of Dog: 
+							<input id="dog-name" class="contact-input" type="text" name="enrollment[dogName]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Breed: 
+							<input id="dog-breed" class="contact-input" type="text" name="enrollment[dogBreed]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Age: 
+							<input id="dog-age" class="contact-input" type="number" name="enrollment[dogAge]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Contact: 
+							<input id="dog-age" class="contact-input" type="text" name="enrollment[contact]" placeholder="Enter Phone # or Email"required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title-checkbox"> 
+							<input id="behavior-class" class="contact-input-checkbox" type="checkbox" name="enrollment[behaviorClass]" /> Behavior
+							<input id="training-class" class="contact-input-checkbox2" type="checkbox" name="enrollment[trainingClass]" /> Training
+						</h4>
+					</div>
+
+					<br>
+
+					<div class="contact-item">
+						<h4 class="input-title-message">Message: </h4>
+						<textarea class="contact-input-text" name="enrollment[msg]"></textarea>
+					</div>
+					<div class="g-recaptcha" data-sitekey="6Le5iloUAAAAAK6R_WR2vqqej6cM987NTYQjXe8y"></div>
+					<button class="contact-form-send">Send</button>
+				</form>
+			</div>
+		</div>
+	
+	</div>	
+
+
+
+<!-- <script type="text/javascript" src="/scripts/navPages/schedule.js"></script> -->
+
+<% include ../partials/footer %>
