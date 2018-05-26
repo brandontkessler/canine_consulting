@@ -4,8 +4,7 @@
 	background-size: cover;
 	background-position: center;
 	padding-top: 20px;
-	margin-bottom: -30px;
-	min-height: 800px;
+	height: calc(100vh - 120px);
 }
 
 .schedule-container{
@@ -13,72 +12,6 @@
 	margin: 0 auto;
 }
 
-.contact-form {
-	margin: 30px 0;
-	width: 700px;
-	height: 550px;
+.schedule-container p {
+	font-size: 2em;
 }
-
-.contact-form h2 {
-	margin-bottom: 30px;
-}
-
-.input-title {
-	width: 450px;
-	text-align: right;
-	margin: 10px 0 0 0;
-}
-
-.contact-input {
-	width: 250px;
-	outline: none;
-	border: 2px solid rgba(119, 210, 202, 1);
-	border-radius: 10px;
-	font-size: 1em;
-	padding: 5px 5px;
-	margin-left: 20px;
-	background-color: rgba(255, 255, 255, 0.7);
-}
-
-.input-title-checkbox {
-	text-align: left;
-	margin: 15px 0 0 200px;
-}
-
-.contact-input-checkbox2 {
-	margin-left: 30px;
-}
-
-.input-title-message {
-	margin: 0;
-	text-align: left;
-}
-
-.contact-input-text {
-	resize: none;
-	width: 450px;
-	margin: 5px 0 0 0;
-	outline: none;
-	border: 2px solid rgba(119, 210, 202, 1);
-	height: 8em;
-	font-size: 1em;
-	padding: 5px;
-	border-radius: 10px;
-	overflow-y: auto;
-	background-color: rgba(255, 255, 255, 0.7);
-}
-
-.contact-form-send {
-	outline: none;
-	border: none;
-	box-shadow: none;
-	border-radius: 10px;
-	color: white;
-	background-color: rgba(119, 210, 202, 1);
-	font-size: 1em;
-	padding: 10px 5px;
-	width: 200px;
-	margin-left: 125px;
-	margin-top: 20px;
-}
-

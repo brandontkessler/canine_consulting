@@ -2,11 +2,13 @@
 
 	<title>Canine Consulting Classes Page</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/navPages/classes.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 <% include ../partials/navbar %>
 	<div class="classes-background">
 		<div class="classes">
 			<div class="choose-package">
 				<p>Hover over a training package to see more information!</p>
+				<p id="trainer-contact">Speak to a trainer</p>
 			</div>
 			<h2 class="class-category">Training</h2>
 			<div class="training-section">
@@ -85,25 +87,96 @@
 			<div class="classes-description-container">
 				<div id="reactivity">
 					<ul class="classes-description-list">
-						<li>reactivity</li>
+						<li>Evaluation and observations</li>
+						<li>Obedience to low reactions (bottom of the totem)</li>
+						<li>Reactions to the mid-range distractions</li>
+						<li>Reaction training to the stimulus</li>
+						<li>Stimulus behavior modification with enhanced distance training methods</li>
+						<li>Real life trial class days</li>
+						<li>End of class evaluation</li>
 					</ul>
 					<p class="price">Price: $1.5MM</p>
 				</div>
 				<div id="socialization">
 					<ul class="classes-description-list">
-						<li>socialize</li>
+						<li>Evaluation and diagnosis</li>
+						<li>Diagnosis of level of under-socialization and reactivity</li>
+						<li>Learn low level socialization obedience tools</li>
+						<li>Mid-range socialization in a low level environment</li>
+						<li>Safety training</li>
+						<li>Environment training</li>
+						<li>Territory behavior modification</li>
+						<li>Final evaluation</li>
 					</ul>
 					<p class="price">Price: $1.5MM</p>
 				</div>
 				<div id="anxiety">
 					<ul class="classes-description-list">
-						<li>anxiety</li>
+						<li>Evaluation and diagnosis</li>
+						<li>Vet recommendations</li>
+						<li>Similar training to reactivity and socialization training</li>
+						<li>In-home obedience training with low anxiety stimulus</li>
+						<li>Mid-range and outide training will depend on the dog's personal anxiety triggers</li>
+						<li>Final evaluation</li>
 					</ul>
 					<p class="price">Price: $1.5MM</p>
 				</div>
 			</div>
 
 		</div>
+
+		<div class="contact-popup-background">
+			<div class="contact-form">
+				<form id="enrollmentForm" action="/enrollment" method="post">
+					<div class="contact-item">
+						<h4 class="input-title">Name of Owner: 
+							<input id="owner-name" class="contact-input" type="text" name="enrollment[ownerName]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Name of Dog: 
+							<input id="dog-name" class="contact-input" type="text" name="enrollment[dogName]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Breed: 
+							<input id="dog-breed" class="contact-input" type="text" name="enrollment[dogBreed]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Age: 
+							<input id="dog-age" class="contact-input" type="number" name="enrollment[dogAge]" required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title">Preferred Contact: 
+							<input id="dog-age" class="contact-input" type="text" name="enrollment[contact]" placeholder="Enter Phone # or Email"required />
+						</h4>
+					</div>
+					<div class="contact-item">
+						<h4 class="input-title-checkbox"> 
+							<input id="behavior-class" class="contact-input-checkbox" type="checkbox" name="enrollment[behaviorClass]" /> Behavior
+							<input id="training-class" class="contact-input-checkbox2" type="checkbox" name="enrollment[trainingClass]" /> Training
+						</h4>
+					</div>
+
+					<br>
+
+					<div class="contact-item">
+						<h4 class="input-title-message">Message: </h4>
+						<textarea class="contact-input-text" name="enrollment[msg]"></textarea>
+					</div>
+
+					<div class="g-recaptcha" data-sitekey="6Le5iloUAAAAAK6R_WR2vqqej6cM987NTYQjXe8y"></div>
+					<div class="form-buttons">
+						<p class="contact-form-cancel">Cancel</p>
+						<button class="contact-form-send">Send</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+
 	</div>
 
 <script type="text/javascript" src="/scripts/navPages/classes.js"></script>

@@ -2,7 +2,7 @@
 .method-background {
 	background-image: url('https://i.imgur.com/h5w5M3U.jpg');
 	background-size: cover;
-	height: 800px;
+	height: 1300px;
 	padding-top: 20px;
 }
 
@@ -11,17 +11,56 @@
 	margin: 0 auto;
 }
 
-.blurb {
-	width: 60%;
-	margin: 0 auto;
+.blurb-intro {
+	width: 90%;
+	margin: 0 auto 0 auto;
+	padding-top: 30px;
 	color: white;
+	padding-bottom: 20px;
+	border-radius: 20px;
+}
+
+.blurb-intro p {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 2em;
+	text-indent: 40px;
+	font-family: 'Handlee', 'cursive';
+	text-align: center;
 }
 
 .blurb-separate {
-	border: 1px solid rgba(119, 210, 202, 0.8);
-	margin: 70px 0;
+	border: none;
+    background-color: rgba(119, 210, 202, 1);
+    color: rgba(119, 210, 202, 1);
+    height: 2px;
+    width: 90%;
+    margin: 0 auto 30px auto; 
 }
 
+.learn-more {
+	overflow: hidden;
+	margin: 40px 0 10px 0;
+	text-align: center;
+}
+
+.learn-button {
+	outline: none;
+	border: 3px solid rgba(119, 210, 202, 1);
+	color: rgba(119, 210, 202, 1);
+	background-color: rgba(255, 255, 255, 0.9);
+	height: 50px;
+	font-size: 1.2em;
+	border-radius: 30px;
+	cursor: pointer;
+	width: 500px;
+}
+
+.learn-button:hover {
+	border: 3px solid white;
+	color: white;
+	background-color: rgba(119, 210, 202, 1);
+}
 
 .boxes-behavior {
 	overflow: hidden;
@@ -34,15 +73,18 @@
 	color: white;
 	padding: 70px 0;
 	float: left;
-	margin-left: calc((100% - 1000px)/5);
+	margin-top: 5px;
+	margin-left: calc((100% - 1024px)/5);
 	border-radius: 20px;
 	font-size: 1.5em;
 	cursor: pointer;
+	border: 3px solid white;
 }
 
 .box:hover {
 	color: rgba(119, 210, 202, 1);
 	background-color: white;
+	border: 3px solid rgba(119, 210, 202, 1);
 }
 
 .box1 {
@@ -60,16 +102,19 @@
 	color: white;
 	padding: 70px 0;
 	float: left;
-	margin-left: calc((100% - 1000px)/5);
+	margin-left: calc((100% - 1024px)/5);
+	margin-top: 5px;
 	border-radius: 15px;
 	font-size: 1.5em;
 	cursor: pointer;
 	max-height: 31px;
+	border: 3px solid white;
 }
 
 .box2:hover {
 	background-color: white;
 	color: rgba(119, 210, 202, 1);
+	border:  3px solid rgba(119, 210, 202, 1);
 }
 
 .popup-background {
@@ -93,7 +138,11 @@
 	border: 10px solid rgba(119, 210, 202, 1);
 	border-radius: 10px;
 	overflow: auto;
-	height: 700px;
+	max-height: 70vh;
+}
+
+.popup-package-content {
+	display: none;
 }
 
 .x-close-container {
@@ -123,8 +172,27 @@
 	margin-top: 10px;
 }
 
+.popup-package-content p {
+	width: 80%;
+	text-indent: 30px;
+	margin: 16px auto;
+}
+
+.popup-image-title {
+	text-align: center;
+	font-size: 1.6em;
+	margin-bottom: 0;
+}
+
+.popup-image {
+	margin-top: 0;
+	margin-bottom: 30px;
+	margin-left: calc((100% - 795px)/2);
+}
+
 .popup-close {
 	margin-left: calc(50% - 50px);
+	margin-top: 20px;
 	width: 100px;
 	height: 50px;
 	color: white;

@@ -27,7 +27,7 @@ router.get('/classes', (req, res) => res.render('navPages/classes'));
 router.get('/schedule', (req, res) => res.render('navPages/schedule'));
 
 // ENROLLMENT
-router.route('/enrollment')
+router.route('/trainer_contact')
 	.post(helpers.enrollmentSubmit)
 
 module.exports = router;

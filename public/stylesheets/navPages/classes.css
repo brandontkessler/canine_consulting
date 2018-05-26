@@ -1,17 +1,40 @@
 /* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+body {
+	overflow-x: hidden;
+}
+
 .classes-background {
 	background-image: url('https://i.imgur.com/2kNJQBa.jpg');
-	background-size: cover
+	background-size: cover;
 	background-position: center;
 	padding-top: 25px;
 	color: white;
-	min-height: 1000px;
+	min-height: 1100px;
 	margin-bottom: -19px;
 }
 
 .classes {
 	width: 75%;
 	margin: 20px auto;
+}
+
+#trainer-contact {
+	font-size: 1em;
+	cursor: pointer;
+	border: 2px solid rgba(119, 210, 202, 1);
+	background-color: white;
+	color: rgba(119, 210, 202, 1);
+	border-radius: 10px;
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	margin-top: 20px;
+}
+
+#trainer-contact:hover {
+	border: 2px solid white;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
 }
 
 .choose-package p {
@@ -111,3 +134,122 @@
 #welcome-home, #age-dont-mean-a-thing, #upperclassman, #hooman-and-me, #reactivity, #socialization, #anxiety {
 	display: none;
 }
+
+/******************************* CONTACT FORM *********************************/
+.contact-popup-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.contact-form{
+	background-color: #f5f5f5;
+	margin: 10vh auto;
+	width: 600px;
+	max-height: 75vh;
+	border: 5px solid rgba(119, 210, 202, 1);
+	border-radius: 10px;
+	overflow: auto;
+	padding: 20px;
+}
+
+.contact-item {
+	text-align: center;
+}
+
+.input-title {
+	color: black;
+	width: 450px;
+	text-align: right;
+	margin: 10px 0 0 0;
+}
+
+.contact-input {
+	width: 250px;
+	outline: none;
+	border: 2px solid rgba(119, 210, 202, 1);
+	border-radius: 10px;
+	font-size: 1em;
+	padding: 5px 5px;
+	margin-left: 20px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.input-title-checkbox {
+	color: black;
+	text-align: left;
+	margin: 15px 0 0 200px;
+}
+
+.contact-input-checkbox2 {
+	margin-left: 30px;
+}
+
+.input-title-message {
+	color: black;
+	margin: 0 0 0 30px;
+	text-align: left;
+}
+
+.contact-input-text {
+	resize: none;
+	width: 450px;
+	margin: 5px 0 0 0;
+	outline: none;
+	border: 2px solid rgba(119, 210, 202, 1);
+	height: 8em;
+	font-size: 1em;
+	padding: 5px;
+	border-radius: 10px;
+	overflow-y: auto;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.g-recaptcha {
+	transform: scale(0.8);
+}
+
+.form-buttons{
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.contact-form-cancel {
+	outline: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 10px;
+	color: white;
+	background-color: gray;
+	font-size: 0.9em;
+	padding: 10px 5px;
+	width: 190px;
+	margin: 20px 20px 0 calc((100% - 400px)/2);
+	float: left;
+}
+
+.contact-form-send {
+	outline: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 10px;
+	color: white;
+	background-color: rgba(119, 210, 202, 1);
+	font-size: 1em;
+	padding: 10px 5px;
+	width: 200px;
+	margin-top: 20px;
+	float: left;
+}
+
+.contact-form-cancel:hover, .contact-form-send:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+

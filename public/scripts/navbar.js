@@ -3,6 +3,34 @@ const 	mobileButton = document.querySelector('#mobile-navigation'),
 		darkHide = document.querySelector('#dark-hide'),
 		flash = document.querySelector('.flash');
 
+		// Grab the navbar links
+		const 	teamNav = document.querySelector('#team-nav'),
+				methodNav = document.querySelector('#method-nav'),
+				classesNav = document.querySelector('#classes-nav'),
+				scheduleNav = document.querySelector('#schedule-nav');
+
+		
+		// Grab navigation tabs for highlighting active one
+		let 	activeItem = window.location.pathname,
+				navItems = [
+					{
+						navDOM: teamNav,
+						navLocation: "/team"
+					},
+					{
+						navDOM: methodNav,
+						navLocation: "/method"
+					},
+					{
+						navDOM: classesNav,
+						navLocation: "/classes"
+					},
+					{
+						navDOM: scheduleNav,
+						navLocation: "/schedule"
+					},
+				];
+
 // Refresh window on resize
 window.onresize = function(){ location.reload(); }
 
@@ -18,7 +46,18 @@ window.addEventListener('load', () => {
 		}, 4000)
 	}
 
-})
+	// Handle the logic for highlighting active tab
+	// Remove class from all navs on reload
+	for (let item of navItems){
+		item.navDOM.classList.remove("selected-nav");
+		
+	// Highlighting the active navigation tab	
+		if(activeItem === item.navLocation){
+			item.navDOM.classList.add("selected-nav")
+		}
+	}
+
+});
 
 // HANDLE MOBILE NAVIGATION
 mobileButton.addEventListener('click', () => {

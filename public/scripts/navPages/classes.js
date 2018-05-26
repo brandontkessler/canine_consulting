@@ -3,6 +3,13 @@ const 	classDescription = document.querySelectorAll('.classes-description-list')
 	 	idSelectorArray = ['#welcome-home', '#age-dont-mean-a-thing', '#upperclassman', '#hooman-and-me', '#reactivity', '#socialization', '#anxiety'],
 	 	descriptionContainers = document.querySelectorAll('.classes-description-container');
 
+// VARIABLES FOR FORM POPUP HANDLING
+const 	openPopupButton = document.querySelector("#trainer-contact"),
+		cancelButton = document.querySelector(".contact-form-cancel"),
+		popupForm = document.querySelector(".contact-popup-background");
+
+
+// HANDLE JS FOR HOVERING OVER CLASS PACKAGES
 for (let button of buttons){
 	let thisId = extractId(button),
 		thisInfo = document.querySelector(`#${thisId}`),
@@ -33,3 +40,19 @@ function addBlack(array){
 		}
 	}
 }
+
+// OPEN/CLOSE FORM POPUP
+openPopupButton.addEventListener('click', () => {
+	popupForm.style.display = "block";
+	
+})
+
+cancelButton.addEventListener('click', () => {
+	popupForm.style.display = "none"
+})
+
+document.querySelector('*').addEventListener('click', (e) => {
+	if(e.target === popupForm){
+		popupForm.style.display = "none"
+	}
+})

@@ -34,7 +34,7 @@ exports.signout = (req, res) => {
 }
 
 // ENROLLMENT
-exports.enrollmentSubmit = (req, res) => {	
+exports.enrollmentSubmit = (req, res) => {
 	let captchaResponse = 'g-recaptcha-response',
 		captcha = req.body[captchaResponse],
 		secretKey = process.env.SECRET_KEY,

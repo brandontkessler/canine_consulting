@@ -10,30 +10,23 @@
 		<ul id="navigation">
 			<div class="center-nav">
 				<li class="nav-paw"><i class="fas fa-paw"></i></li>
-				<hr class="nav-hr">
-				<li><a href="/team">Team</a></li>
+				<li><a id="team-nav" class="nav-item" href="/team">Team</a></li>
 				<li class="nav-paw"><i class="fas fa-paw"></i></li>
-				<hr class="nav-hr">
-				<li><a href="/method">Method</a></li>
+				<li><a id="method-nav" class="nav-item" href="/method">Method</a></li>
 				<li class="nav-paw"><i class="fas fa-paw"></i></li>
-				<hr class="nav-hr">
-				<li><a href="/classes">Classes</a></li>
+				<li><a id="classes-nav" class="nav-item" href="/classes">Classes</a></li>
 				<li class="nav-paw"><i class="fas fa-paw"></i></li>
-				<hr class="nav-hr">
-				<li><a href="/schedule">Schedule/Events</a></li>
+				<li><a id="schedule-nav" class="nav-item" href="/schedule">Schedule/Events</a></li>
 				<li class="nav-paw"><i class="fas fa-paw"></i></li>
 			</div>
 			<div class="right-nav">
 				<% if(currentUser){ %>
 					<hr class="nav-hr">
-					<li><a href="/profile">Profile</a></li>
-					<hr class="nav-hr">
-					<li><a href="/signout">Sign Out</a></li>
+					<li><a class="nav-item" href="/profile">Profile</a></li>
+					<li><a class="nav-item" href="/signout">Sign Out</a></li>
 				<% } else { %>
-					<hr class="nav-hr">
-					<li><a href="/register">Register</a></li>
-					<hr class="nav-hr">
-					<li><a href="/login">Log In</a></li>
+					<li><a class="nav-item" href="/register">Register</a></li>
+					<li><a class="nav-item" href="/login">Log In</a></li>
 				<% } %>
 			</div>
 		</ul>

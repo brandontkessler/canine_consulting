@@ -28,23 +28,15 @@ body {
 	float: right;
 	padding: 0;
 	margin: 0;
-	margin-top: calc((40px - 23px)/2);
 	width: calc(100% - 73px);
-}
-
-.nav-hr {
-	width: 80%;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	margin-left: 10px;
-	margin-top: 0;
-	margin-bottom: 0;
-	display: none;
+	max-height: 40px;
+	overflow: hidden;
 }
 
 .center-nav {
 	float: left;
 	overflow: hidden;
-	margin-left: calc((100% - 146px - 551px)/2);
+	margin-left: calc((100% - 146px - 551px - 80px)/2);
 }
 
 .center-nav li {
@@ -62,14 +54,21 @@ body {
 
 #navigation li {
 	float: left;
-	margin-left: 5px;
-	margin-right: 10px;
+	margin: -3px 10px 0 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-#navigation li a {
+.nav-item {
 	text-decoration: none;
 	color: white;
 	font-size: 20px;
+	padding: calc((40px - 23px)/2) 10px 8px 10px;
+}
+
+.selected-nav {
+	color: rgba(119, 210, 202, 1);
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 #navigation li a:hover, #brand a:hover {
