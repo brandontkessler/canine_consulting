@@ -23,6 +23,14 @@ body {
 	font-size: 30px;
 }
 
+.contact-number {
+	color: white;
+	font-size: 1em;
+	position: fixed;
+	top: 10px;
+	left: 120px;
+}
+
 #navigation {
 	list-style: none;
 	float: right;

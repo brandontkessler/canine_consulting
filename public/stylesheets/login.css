@@ -1,7 +1,8 @@
 /* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
 #form-body {
 	height: calc(100vh - 100px);
-	background-color: #F5F5F5;
+	background-image: url('https://i.imgur.com/bhIJOmm.jpg');
+	background-position: right top;
 }
 
 .form-container {
@@ -49,12 +50,29 @@
 	opacity: 0.8;
 }
 
-.form-container a {
+.login-button {
 	font-size: 0.8em;
 	text-decoration: none;
-	color:rgba(119, 210, 202, 1);
+	color: white;
 }
 
-.form-container a:hover {
-	opacity: 0.8;
+.login-button:hover {
+	opacity: 0.6;
+}
+
+.form-content {
+	line-height: 25px;
+}
+
+.classes-button {
+	color: rgba(119, 210, 202, 1);
+	border: 1px solid rgba(119, 210, 202, 1);
+	padding: 1px;
+	border-radius: 5px;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.classes-button:hover {
+	opacity: 0.6;
 }

@@ -8,6 +8,11 @@ const 	openPopupButton = document.querySelector("#trainer-contact"),
 		cancelButton = document.querySelector(".contact-form-cancel"),
 		popupForm = document.querySelector(".contact-popup-background");
 
+// VARIABLES FOR PRICES POPUP HANDLING
+const 	openPricesPopupBtn = document.querySelector("#pricing"),
+		pricesPopupBackground = document.querySelector(".prices-popup-background"),
+		pricesPopupClose = document.querySelector(".prices-popup-close");
+
 
 // HANDLE JS FOR HOVERING OVER CLASS PACKAGES
 for (let button of buttons){
@@ -42,17 +47,24 @@ function addBlack(array){
 }
 
 // OPEN/CLOSE FORM POPUP
-openPopupButton.addEventListener('click', () => {
-	popupForm.style.display = "block";
-	
-})
+openPopupButton.addEventListener('click', () => popupForm.style.display = "block")
 
-cancelButton.addEventListener('click', () => {
-	popupForm.style.display = "none"
-})
+cancelButton.addEventListener('click', () => popupForm.style.display = "none")
 
 document.querySelector('*').addEventListener('click', (e) => {
 	if(e.target === popupForm){
 		popupForm.style.display = "none"
 	}
 })
+
+// OPEN/CLOSE PRICES POPUP
+openPricesPopupBtn.addEventListener('click', () => pricesPopupBackground.style.display = "block")
+
+pricesPopupClose.addEventListener('click', () => pricesPopupBackground.style.display = "none")
+
+document.querySelector('*').addEventListener('click', (e) => {
+	if(e.target === pricesPopupBackground){
+		pricesPopupBackground.style.display = "none"
+	}
+})
+

@@ -1,0 +1,78 @@
+/* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+#form-body {
+	height: calc(100vh - 100px);
+	background-image: url('https://i.imgur.com/6SepO5y.jpg');
+	background-position: bottom;
+}
+
+.form-container {
+	width: 350px;
+	margin: 0 auto;
+}
+
+.form-header {
+	margin: 0;
+	padding-top: 10vh;
+	text-align: center;
+}
+
+.registration-login-form {
+	margin-top: 30px;
+}
+
+.registration-login-form input {
+	width: 100%;
+	padding-left: 10px;
+	margin-left: -7.5px;
+	margin-bottom: 20px;
+	line-height: 30px;
+	font-size: 1.2em;
+	border-radius: 10px;
+	outline-style: none;
+	border: 2px solid rgba(119, 210, 202, 1);
+}
+
+.registration-login-form button {
+	width: calc(100% + 15px);
+	margin-left: -7.5px;
+	margin-bottom: 10px;
+	height: 30px;
+	outline: none;
+	border: 1px solid white;
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+	font-size: 1.2em;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.registration-login-form button:hover {
+	opacity: 0.8;
+}
+
+.login-button {
+	font-size: 0.8em;
+	text-decoration: none;
+	color: white;
+}
+
+.login-button:hover {
+	opacity: 0.6;
+}
+
+.form-content {
+	line-height: 25px;
+}
+
+.classes-button {
+	color: rgba(119, 210, 202, 1);
+	border: 1px solid rgba(119, 210, 202, 1);
+	padding: 1px;
+	border-radius: 5px;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.classes-button:hover {
+	opacity: 0.6;
+}

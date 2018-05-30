@@ -1,13 +1,14 @@
 <% include ./partials/header %>
 
 	<title>Canine Consulting Registration Page</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/register-login.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/register.css">
 <% include ./partials/navbar %>
 
 
 	<div id="form-body">
 		<div class="form-container">
 			<h1 class="form-header">Register</h1>
+			<p class="form-content">*Profiles are only available for current students, sign up under <a href="/classes" class="classes-button">Classes</a></p>
 			<form class="registration-login-form" action="/register" method="post">
 				<label>Email</label>
 				<input type="email" name="username" required>
@@ -15,7 +16,7 @@
 				<input type="password" name="password" required>
 				<button>Submit</button>
 			</form>
-			<a href="/login">already have an account?</a>
+			<a href="/login" class="login-button">already have an account?</a>
 		</div>		
 	</div>
 

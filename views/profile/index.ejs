@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+	<title>Canine Consulting Profilee</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+
+<% include ../partials/navbar %>
+
+<div class="profile-container">
+	<div class="profile-header">
+		<img class="profile-image" src="https://i.imgur.com/3DqUSj6.jpg">
+		<div class="profile-info">
+			<h3>Lonzo</h3>
+			<h3>1 year(s) old</h3>
+			<h3>Reactivity Package</h3>
+		</div>
+	</div>
+
+	<div class="entire-dropdown">
+		<div class="profile-dropdown" id="progress-button">
+			<h2 class="dropdown-title"><span class="dropdown-name">Progress</span><span class="blink"><i class="fas fa-paw"></i></span></h2>
+		</div>
+		<div class="dropdown-content" id="progress-content">
+			<textarea class="dropdown-message" placeholder="here is where you can write anything"></textarea>
+		</div>
+	</div>
+
+	<div class="entire-dropdown">
+		<div class="profile-dropdown" id="homework-button">
+			<h2 class="dropdown-title"><span class="dropdown-name">Homework</span><span class="blink"><i class="fas fa-paw"></i></span></h2>
+		</div>
+		<div class="dropdown-content" id="homework-content">
+			<textarea class="dropdown-message" placeholder="here is where you can write anything"></textarea>
+		</div>
+	</div>
+
+</div>
+
+
+<script type="text/javascript" src="/scripts/profile.js"></script>
+<% include ../partials/footer %>

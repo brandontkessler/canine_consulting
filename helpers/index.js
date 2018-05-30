@@ -23,7 +23,7 @@ exports.postRegister = (req, res) => {
 exports.getLogin = (req, res) => res.render('login');
 exports.postLogin = (req, res) => {
 		req.flash('success', 'you are logged in');
-		res.redirect('/')
+		res.redirect(`/profile/${req.user.id}`);
 }
 
 // SIGNOUT
@@ -33,8 +33,8 @@ exports.signout = (req, res) => {
 	res.redirect('/');
 }
 
-// ENROLLMENT
-exports.enrollmentSubmit = (req, res) => {
+// CLASSES CONTACT FORM
+exports.classesContactSubmit = (req, res) => {
 	let captchaResponse = 'g-recaptcha-response',
 		captcha = req.body[captchaResponse],
 		secretKey = process.env.SECRET_KEY,

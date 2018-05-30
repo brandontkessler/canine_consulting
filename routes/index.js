@@ -2,6 +2,7 @@ const 	express = require('express'),
 		router = express.Router(),
 		passport = require('passport'),
 		helpers = require('../helpers'),
+		profileHelpers = require('../helpers/profile'),
 		middleware = require('../middleware'),
 		User = require('../models/user');
 
@@ -26,8 +27,13 @@ router.get('/method', (req, res) => res.render('navPages/method'));
 router.get('/classes', (req, res) => res.render('navPages/classes'));
 router.get('/schedule', (req, res) => res.render('navPages/schedule'));
 
-// ENROLLMENT
+// CLASSES CONTACT
 router.route('/trainer_contact')
-	.post(helpers.enrollmentSubmit)
+	.post(helpers.classesContactSubmit)
+
+// PROFILE
+router.get('/profile/:id', middleware.isLoggedIn, profileHelpers.userProfile);
+
+
 
 module.exports = router;

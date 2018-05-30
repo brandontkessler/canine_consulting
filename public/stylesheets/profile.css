@@ -1,0 +1,76 @@
+/* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+
+.profile-container {
+	background-color: white;
+	width: 700px;
+	margin: 0 auto;
+}
+
+.profile-header {
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+.profile-image {
+	width: 225px;
+	margin-right: 25px;
+	float: left;
+}
+
+.profile-info {
+	width: 450px;
+	float: left;
+}
+
+.profile-dropdown {
+	margin-top: 30px;
+	border: 2px solid rgba(119, 210, 202, 1);
+	border-radius: 10px;
+	background-color: rgba(119, 210, 202, 1);
+	cursor: pointer;
+}
+
+.dropdown-title {
+	margin: 10px 0 10px 20px;
+	color: white;
+}
+
+.dropped-down-title {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.blink {
+	float: right;
+	margin-right: 20px;
+	/*animation: blinker 2s linear infinite;*/
+}
+
+@keyframes blinker {
+  50% {
+    color: rgba(234, 89, 89, 1);
+  }
+}
+
+.dropdown-content {
+	overflow: hidden;
+}
+
+#progress-content, #homework-content {
+	display: none;
+	transition: height 0.5s ease-out;
+}
+
+.dropdown-message {
+	margin-top: -1px;
+	width: calc(700px - 8px - 20px);
+	resize: none;
+	outline: none;
+	border: 4px solid rgba(119, 210, 202, 1);
+	padding: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	height: 200px;
+	overflow: auto;
+	font-size: 1.5em;
+}

@@ -37,6 +37,19 @@ body {
 	color: white;
 }
 
+#pricing {
+	float: right;
+	cursor: pointer;
+	margin-top: -40px;
+	border: 1px solid white;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+#pricing:hover {
+	opacity: 0.6;
+}
+
 .choose-package p {
 	text-align: center;
 	margin: 0;
@@ -110,14 +123,6 @@ body {
 	margin: 10px 0;
 	color: white;
 	transition: color 1s ease-out;
-}
-
-.price {
-	margin: 0;
-	padding: 10px;
-	text-align: center;
-	background-color: rgba(119, 210, 202, 1);
-	color: white;
 }
 
 .classes-separate {
@@ -249,6 +254,88 @@ body {
 }
 
 .contact-form-cancel:hover, .contact-form-send:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+/******************************* PRICES POPUP *********************************/
+.prices-popup-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.prices-popup{
+	background-color: #f5f5f5;
+	margin: 10vh auto;
+	width: 600px;
+	max-height: 75vh;
+	border: 5px solid rgba(119, 210, 202, 1);
+	border-radius: 10px;
+	overflow: auto;
+	padding: 20px;
+}
+
+.prices-header {
+	text-align: center;
+	color: black;
+}
+
+.prices-type {
+	color: black;
+}
+
+.price-per-session {
+	text-indent: 30px;
+	color: rgba(119, 210, 202, 1);
+	font-weight: bold;
+}
+
+.prices-content {
+	color: black;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.prices-type-discount {
+	color: black;
+	margin-bottom: 0;
+}
+
+.discount-header{
+	color: black;
+	margin: 0;
+}
+
+.discount-prices {
+	color: black;
+	margin: 0;
+	text-indent: 30px;
+}
+
+.rescue-price {
+	color: black;
+	text-indent: 30px;
+	margin: 0;
+}
+
+.prices-popup-close {
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+	background-color: gray;
+	font-size: 0.9em;
+	padding: 10px 5px;
+	width: 190px;
+	margin: 30px auto 5px auto;
+}
+
+.prices-popup-close:hover {
 	cursor: pointer;
 	opacity: 0.6;
 }
