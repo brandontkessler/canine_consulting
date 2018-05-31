@@ -1,6 +1,6 @@
 /* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
 #form-body {
-	height: calc(100vh - 100px);
+	height: 800px;
 	background-image: url('https://i.imgur.com/bhIJOmm.jpg');
 	background-position: right top;
 }

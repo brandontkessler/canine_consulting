@@ -2,6 +2,8 @@
 body {
 	margin: 0;
 	font-family: 'Merriweather', serif;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 /************************** NAVBAR *********************************/
@@ -133,8 +135,7 @@ body {
 	}
 
 	.contact-number{
-		font-size: 0.7em;
-		left: calc(50% - 89.781px/2);
+		left: calc(50% - 128.25px/2);
 	}
 
 	.nav-hr {
@@ -209,4 +210,5 @@ body {
 	background-color: rgba(139, 183, 121, 1);
 	color: white;
 }
+
 
