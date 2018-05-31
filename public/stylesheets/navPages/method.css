@@ -128,6 +128,8 @@
 	z-index: 1;
 	display: none;
 	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	-o-transition: opacity 0.2s linear;
 	transition: opacity 0.2s linear;
 }
 
@@ -202,7 +204,8 @@
 	border-radius: 5px;
 	outline: none;
 	border: none;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	cursor: pointer;
 }
 

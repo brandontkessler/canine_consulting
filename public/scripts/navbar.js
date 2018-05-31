@@ -31,9 +31,6 @@ const 	mobileButton = document.querySelector('#mobile-navigation'),
 					},
 				];
 
-// Refresh window on resize
-window.onresize = function(){ location.reload(); }
-
 window.addEventListener('load', () => {
 
 	// HANDLE FLASH TIMEOUTS

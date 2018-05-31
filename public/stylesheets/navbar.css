@@ -116,8 +116,14 @@ body {
 		margin-top: 40px;
 		background-color: rgba(119, 210, 202, 1);
 		padding: 10px;
-		transform: translateX(100vw);
+		-webkit-transform: translateX(100vw);
+		    -ms-transform: translateX(100vw);
+		        transform: translateX(100vw);
+		-webkit-transition: -webkit-transform 0.5s ease-out;
+		transition: -webkit-transform 0.5s ease-out;
+		-o-transition: transform 0.5s ease-out;
 		transition: transform 0.5s ease-out;
+		transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 		z-index: 2;
 		max-height: none;
 	}
@@ -169,6 +175,8 @@ body {
 		width: 100%;
 		overflow: hidden;
 		opacity: 0;
+		-webkit-transition: opacity 0.5s ease-out;
+		-o-transition: opacity 0.5s ease-out;
 		transition: opacity 0.5s ease-out;
 		display: none;	
 	}
@@ -185,6 +193,8 @@ body {
 	position: fixed;
 	margin-left: calc(10%);
 	opacity: 0.8;
+	-webkit-transition: opacity 2s ease-out;
+	-o-transition: opacity 2s ease-out;
 	transition: opacity 2s ease-out;
 }
 

@@ -122,6 +122,8 @@ body {
 .classes-description-list li {
 	margin: 10px 0;
 	color: white;
+	-webkit-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
 	transition: color 1s ease-out;
 }
 
@@ -233,7 +235,9 @@ body {
 }
 
 .g-recaptcha {
-	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	        transform: scale(0.8);
 }
 
 .form-buttons{
@@ -245,7 +249,8 @@ body {
 .contact-form-send {
 	outline: none;
 	border: none;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	border-radius: 10px;
 	color: white;
 	background-color: rgba(119, 210, 202, 1);
@@ -259,7 +264,8 @@ body {
 .contact-form-cancel {
 	outline: none;
 	border: none;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	border-radius: 10px;
 	color: white;
 	background-color: gray;
@@ -554,7 +560,9 @@ body {
 	}
 
 	.g-recaptcha {
-		transform: scale(0.7);
+		-webkit-transform: scale(0.7);
+		    -ms-transform: scale(0.7);
+		        transform: scale(0.7);
 		margin-left: -30px;
 	}
 }

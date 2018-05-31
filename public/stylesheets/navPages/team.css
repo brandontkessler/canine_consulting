@@ -84,6 +84,8 @@
 .teammate-info-content {
 	height: 75px;
 	overflow: hidden;
+	-webkit-transition: height 0.5s ease-out;
+	-o-transition: height 0.5s ease-out;
 	transition: height 0.5s ease-out;
 }
 
@@ -187,4 +189,3 @@
 		text-align: left;
 	}
 }
-
