@@ -5,7 +5,8 @@
 	background-position: right;
 	padding-top: 20px;
 	margin-bottom: -19px;
-	height: 1800px;
+	height: 2000px;
+	overflow-x: hidden;
 }
 
 .team-container {
@@ -31,6 +32,18 @@
 
 .image-right {
 	float: right;
+}
+
+.wendy-image {
+	width: 300px;
+	border-radius: 5px;
+}
+
+.wendy-left {
+	width: calc(100% - 300px);
+	overflow: hidden;
+	height: 300px;
+	float: left;
 }
 
 .teammate-image {
@@ -74,16 +87,9 @@
 	transition: height 0.5s ease-out;
 }
 
-/*.see-more {
-	width: 100px;
-	font-weight: 700;
-	color: rgba(119, 210, 202, 1);
-	cursor: pointer;
+.see-more {
+	display: none;
 }
-
-.see-more-button-right {
-	margin-left: calc(100% - 100px);	
-}*/
 
 .team-separate {
 	width: 60%;
@@ -92,7 +98,20 @@
 	opacity: 0.8;
 }
 
-@media screen and (max-width: 69.7em){
+@media screen and (max-width: 69.6875em){
+	.team-container {
+		width: 100%;
+	}
+
+	.wendy-image {
+		width: 200px;
+	}
+
+	.wendy-left {
+		height: 200px;
+		width: calc(100% - 200px)
+	}
+
 	.teammate h3 {
 		font-size: 2.5em;
 	}
@@ -100,9 +119,52 @@
 	.teammate h4 {
 		font-size: 1.2em;
 	}
+
+	.see-more {
+		width: 100px;
+		font-weight: 700;
+		color: rgba(119, 210, 202, 1);
+		cursor: pointer;
+		display: block;
+	}
+
+	.see-more-button-right {
+		margin-left: calc(100% - 100px);	
+	}
 }
 
 @media screen and (max-width: 42em){
+	.team-container {
+		width: 100%;
+	}
+
+	.teammate-container {
+		width: 95%;
+	}
+
+	.teammate-image {
+		width: 100px;
+	}
+
+	.wendy-image {
+		width: 150px;
+	}
+
+	.wendy-left {
+		height: 150px;
+		width: calc(100% - 150px)
+	}
+
+	.teammate-left {
+		height: 100px;
+		width: calc(100% - 100px)
+	}
+
+	.teammate-right {
+		height: 100px;
+		width: calc(100% - 100px)
+	}
+
 	.teammate h3 {
 		font-size: 2em;
 		margin-top: 10px;

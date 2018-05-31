@@ -51,9 +51,11 @@ window.addEventListener('load', () => {
 	for (let item of navItems){
 		item.navDOM.classList.remove("selected-nav");
 		
-	// Highlighting the active navigation tab	
-		if(activeItem === item.navLocation){
-			item.navDOM.classList.add("selected-nav")
+	// Highlighting the active navigation tab
+		if (window.innerWidth >= 1130){
+			if(activeItem === item.navLocation){
+				item.navDOM.classList.add("selected-nav")
+			}
 		}
 	}
 

@@ -5,6 +5,7 @@
 	background-position: center;
 	padding-top: 20px;
 	height: calc(100vh - 120px);
+	overflow: auto;
 }
 
 .schedule-container{
@@ -64,6 +65,29 @@
 	float: left;
 }
 
-.schedule-title-container {
+@media screen and (max-width: 58.125em) {
+	.schedule-container {
+		width: 95%;
+	}
 
+	.schedule-left {
+		width: 90%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.schedule-right {
+		width: 90%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.schedule-content {
+		width: 100%;
+	}
+
+	.schedule-content-events {
+		width: 90%;
+		margin: 0 auto;
+	}
 }
