@@ -1,5 +1,4 @@
 /* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
-
 .profile-container {
 	background-color: white;
 	width: 700px;
@@ -11,15 +10,50 @@
 	margin-top: 30px;
 }
 
-.profile-image {
-	width: 225px;
-	margin-right: 25px;
-	float: left;
-}
-
 .profile-info {
 	width: 450px;
 	float: left;
+}
+
+/****** HIDE USER ID *****/
+#user-id {
+	display: none;
+}
+
+.admin-btn {
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 10px 5px;
+	font-size: 1.2em;
+	color: white;
+	text-align: center;
+}
+
+.admin-edit {
+	background-color: teal;
+	width: 30%;
+}
+
+.admin-save {
+	background-color: green;
+	display: none;
+	width: 30%;
+}
+
+.admin-cancel {
+	background-color: red;
+	display: none;
+	width: 30%;
+}
+
+.admin-edit:hover, .admin-save:hover, .admin-cancel:hover{
+	opacity: 0.7;
+}
+
+#admin-directions {
+	display: none;
 }
 
 .profile-dropdown {
@@ -40,10 +74,18 @@
 	border-bottom-right-radius: 0;
 }
 
-.blink {
+.edit-button {
+	float: right;
+
+}
+
+.badge-alert {
 	float: right;
 	margin-right: 20px;
-	/*animation: blinker 2s linear infinite;*/
+}
+
+.blink {
+	animation: blinker 2s linear infinite;
 }
 
 @keyframes blinker {
@@ -56,7 +98,7 @@
 	overflow: hidden;
 }
 
-#progress-content, #homework-content {
+#progress-content, #homework-content, #next-lesson-content, #evaluations-content, #vaccinations-content {
 	display: none;
 	transition: height 0.5s ease-out;
 }

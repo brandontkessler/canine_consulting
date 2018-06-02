@@ -20,8 +20,11 @@
 				<li class="nav-paw"><i class="fas fa-paw"></i></li>
 			</div>
 			<div class="right-nav">
-				<% if(currentUser){ %>
+				<% if(currentUser && currentUser.isAdmin === false){ %>
 					<li><a class="nav-item" href="/profile/<%= currentUser._id %>">Profile</a></li>
+					<li><a class="nav-item" href="/signout">Sign Out</a></li>
+				<% } else if(currentUser && currentUser.isAdmin === true){ %>
+					<li><a class="nav-item" href="/admin/portal">Portal</a></li>						
 					<li><a class="nav-item" href="/signout">Sign Out</a></li>
 				<% } else { %>
 					<li><a class="nav-item" href="/register">Register</a></li>

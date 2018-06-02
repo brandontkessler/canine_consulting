@@ -2,6 +2,7 @@ const 	express = require('express'),
 		router = express.Router(),
 		passport = require('passport'),
 		helpers = require('../helpers'),
+		adminHelpers = require('../helpers/admin'),
 		profileHelpers = require('../helpers/profile'),
 		middleware = require('../middleware'),
 		User = require('../models/user');
@@ -32,8 +33,22 @@ router.route('/trainer_contact')
 	.post(helpers.classesContactSubmit)
 
 // PROFILE
-router.get('/profile/:id', middleware.isLoggedIn, profileHelpers.userProfile);
+router.route('/profile/:id')
+	.get(middleware.isLoggedIn, middleware.isProfileOwner, profileHelpers.userProfile)
+	.put(middleware.isLoggedIn, middleware.isAdmin, profileHelpers.adminUpdateUserProfile)
 
+// BLINKER HANDLING
+router.route('/profile/:id/:category').post(profileHelpers.userBlinkers);
 
+// ADMIN
+router.route('/admin')
+	.get(adminHelpers.getAdminPage)
+	.post(middleware.loginAuth, middleware.isAdmin, adminHelpers.postAdminLogin)
+
+router.route('/admin/register')
+	.get(adminHelpers.getAdminRegisterPage)
+	.post(adminHelpers.postAdminRegister)
+
+router.get('/admin/portal', middleware.isLoggedIn, middleware.isAdmin, adminHelpers.getAdminPortal)
 
 module.exports = router;

@@ -5,16 +5,45 @@ const 	User = require('../models/user'),
 exports.getRegister = (req, res) => res.render('register');
 exports.postRegister = (req, res) => {
 	let newUser = new User({
-		username: req.body.username
+		username: req.body.username,
+		dogName: req.body.dogName,
+		dogAge: req.body.dogAge,
+		package: req.body.package,
+		isAdmin: false,
+		profile: {
+			progress: "Your trainer will update each category as you go!",
+			homework: "",
+			nextLesson: "",
+			evaluations: "",
+			vaccinations: ""
+		},
+		blinker: {
+			progress: true,
+			homework: false,
+			nextLesson: false,
+			evaluations: false,
+			vaccinations: false
+		}
 	});
+
+	if(req.body.password.length < 6){
+		req.flash('error', 'Password must be at least 6 characters');
+		return res.redirect(`back`)
+	}
+
+	if(req.body.password !== req.body.confirmPassword){
+		req.flash('error', 'Passwords do not match!');
+		return res.redirect(`back`)
+	}
+
 	User.register(newUser, req.body.password, (err, user) => {
 		if(err){
-			console.log(err)
+			req.flash('error', err.message)
 			return res.redirect('/register')
 		}
 		passport.authenticate('local')(req, res, function(){
 			req.flash('success', 'You are now registered and logged in');
-			res.redirect('/')
+			res.redirect(`/profile/${req.user.id}`)
 		})
 	})
 }
@@ -22,8 +51,8 @@ exports.postRegister = (req, res) => {
 // LOGIN
 exports.getLogin = (req, res) => res.render('login');
 exports.postLogin = (req, res) => {
-		req.flash('success', 'you are logged in');
-		res.redirect(`/profile/${req.user.id}`);
+	req.flash('success', 'you are logged in');
+	res.redirect(`/profile/${req.user.id}`);
 }
 
 // SIGNOUT

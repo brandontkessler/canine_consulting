@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+	<title>Canine Consulting Group Register</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
+<% include ../partials/navbar %>
+
+	<h1 class="admin-h1">ADMIN PORTAL</h1>
+
+	<ul class="user-list">
+		<% for (let user of users) {%>
+			<li>
+				<a class="users-profile-link" href="/profile/<%= user.id %>">Visit Dashboard</a>
+				<p class="users-info">Email: <span class="actual-info"><%= user.username %></span></p>
+				<p class="users-info">Dog: <span class="actual-info"><%= user.dogName %></span></p>
+				<hr>
+			</li>
+		<% } %>
+	</ul>
+	
+
+
+<% include ../partials/footer %>

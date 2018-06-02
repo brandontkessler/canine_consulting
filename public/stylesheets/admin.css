@@ -1,0 +1,110 @@
+.admin-h1 {
+	text-align: center;
+}
+
+.admin-h3 {
+	text-align: center;
+}
+
+.admin-buttons {
+	text-align: center;
+}
+
+.admin-btn {
+	text-decoration: none;
+	border: 2px solid blue;
+	padding: 5px;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+.admin-login-form {
+	width: 50%;
+	margin: 50px auto;
+}
+
+.admin-login-input {
+	width: 100%;
+	border: 2px solid teal;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	margin: 5px 0;
+	font-size: 1.3em;
+	text-indent: 10px;
+	border-radius: 5px;
+}
+
+.login-submit-btn {
+	background-color: green;
+	color: white;
+	text-indent: 0;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.login-submit-btn:hover {
+	opacity: 0.6;
+}
+
+@media screen and (max-width: 600px){
+	.admin-login-form {
+		width: 80%;
+	}
+}
+
+/* REGISTER */
+.admin-register-form {
+	width: 50%;
+	margin: 50px auto;
+}
+
+.admin-register-input {
+	width: 100%;
+	border: 2px solid teal;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	margin: 5px 0;
+	font-size: 1.3em;
+	text-indent: 10px;
+	border-radius: 5px;
+}
+
+.register-submit-btn {
+	background-color: green;
+	color: white;
+	text-indent: 0;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.register-submit-btn:hover {
+	opacity: 0.6;
+}
+
+@media screen and (max-width: 600px){
+	.admin-register-form {
+		width: 80%;
+	}
+}
+
+/* Admin Portal */
+.user-list {
+	padding: 0;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.user-list li {
+	margin-bottom: 20px;
+	font-size: 1.2em;
+}
+
+.users-info {
+	margin: 2px 0;
+}
+
+.actual-info {
+	font-weight: bold;
+}

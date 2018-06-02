@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+	<title>Canine Consulting Group Admin</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/admin.css">
+<% include ../partials/navbar %>
+
+	<h1 class="admin-h1">ADMIN PORTAL</h1>
+	<h3 class="admin-h3">ADMIN LOGIN</h3>
+
+	<div class="admin-buttons">
+		<a class="admin-btn" href="/admin/register">REGISTER NEW ADMIN</a>
+	</div>
+
+	<form class="admin-login-form" action="/admin" method="post">
+		<input class="admin-login-input" type="email" name="username" placeholder="email" required>
+		<input class="admin-login-input" type="password" name="password" placeholder="password" required>
+		<button class="admin-login-input login-submit-btn">Submit</button>
+	</form>
+	
+
+
+<% include ../partials/footer %>
