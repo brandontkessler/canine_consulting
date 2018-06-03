@@ -1,18 +1,29 @@
 /* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+
+.profile-bg {
+	background-image: url('https://i.imgur.com/xyrfGan.jpg');
+	background-size: cover;
+	min-height: calc(100vh - 40px - 60px);
+	padding-bottom: 20px;
+}
+
 .profile-container {
-	background-color: white;
 	width: 700px;
 	margin: 0 auto;
 }
 
 .profile-header {
-	overflow: hidden;
-	margin-top: 30px;
+	padding-top: 30px;
+	width: 400px;
+	margin: 0 auto;
 }
 
 .profile-info {
-	width: 450px;
-	float: left;
+	color: white;
+	text-align: center;
+	border: 5px solid white;
+	background-color: rgba(119, 210, 202, 0.5);
+	border-radius: 10px;
 }
 
 /****** HIDE USER ID *****/
@@ -104,6 +115,7 @@
 }
 
 .dropdown-message {
+	background-color: #F5F5F5;
 	margin-top: -1px;
 	width: calc(700px - 8px - 20px);
 	resize: none;
@@ -115,4 +127,61 @@
 	height: 200px;
 	overflow: auto;
 	font-size: 1.5em;
+}
+
+@media screen and (max-width: 49.25em){
+	.profile-container{
+		width: 400px;
+	}
+
+	.profile-header {
+		width: 250px;
+	}
+
+	.profile-info h2{
+		font-size: 1.3em;
+	}
+
+	.profile-info h3 {
+		font-size: 1em;
+	}
+
+	.dropdown-title {
+		font-size: 1.3em;
+	}
+
+	.dropdown-message {
+		width: calc(400px - 8px - 20px);
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 28.125em){
+	.profile-container{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.profile-header {
+		width: 100%;
+	}
+
+	.dropdown-title {
+		font-size: 1em;
+	}
+
+	.dropdown-message {
+		width: 82.5vw;
+	}
+}
+
+@media screen and (max-width: 20.625em){
+	.dropdown-title {
+		font-size: 0.8em;
+	}
+
+	.dropdown-message {
+		width: 90.25%;
+	}
 }

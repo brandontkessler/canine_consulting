@@ -5,117 +5,118 @@
 
 <% include ../partials/navbar %>
 
-<div class="profile-container">
-	<div class="profile-header">
-		<div class="profile-info">
-			<h2>
-				<span>Dog's name:</span>
-				<span><%= user.dogName %></span>
-			</h2>
-			<h3>
-				<span>Age:</span>
-				<span><%= user.dogAge %> year(s) old</span>
-			</h3>
-			<h3>
-				<span>Training/Obedience:</span>
-				<span><%= user.package %></span>
-			</h3>
+<div class="profile-bg">
+	<div class="profile-container">
+		<div class="profile-header">
+			<div class="profile-info">
+				<h2>
+					<span>Dog's name:</span>
+					<span><%= user.dogName %></span>
+				</h2>
+				<h3>
+					<span>Age:</span>
+					<span><%= user.dogAge %> year(s) old</span>
+				</h3>
+				<h3>
+					<span>Training/Obedience:</span>
+					<span><%= user.package %></span>
+				</h3>
+			</div>
 		</div>
+
+		<div id="user-id"><%= user.id %></div>
+
+		<form action="/profile/<%= user.id %>?_method=PUT" method="post">
+			<% if(currentUser.isAdmin === true) { %>
+				<div class="admin-only">
+					<button id="admin-save-btn" class="admin-btn admin-save" type="submit">Save</button>
+					<p id="admin-cancel-btn" class="admin-btn admin-cancel">Cancel</p>
+					<p id="admin-edit-btn" class="admin-btn admin-edit">Edit Admin Information</p>
+					<p id="admin-directions">Hit save once you have finished editing otherwise your updates will not be saved in database!</p>
+				</div>
+			<% } %>
+			<div class="entire-dropdown">
+				<div class="profile-dropdown" id="progress-button">
+					<h2 class="dropdown-title">
+						<span class="dropdown-name">Progress</span>
+						<span class="badge-alert 
+							<% if(user.blinker.progress){ %>
+								blink
+							<% } %>
+						"><i class="fas fa-paw"></i></span>
+					</h2>
+				</div>
+				<div class="dropdown-content" id="progress-content">
+					<textarea class="dropdown-message" name="profile[progress]" disabled><%= user.profile.progress %></textarea>
+				</div>
+			</div>
+
+			<div class="entire-dropdown">
+				<div class="profile-dropdown" id="homework-button">
+					<h2 class="dropdown-title">
+						<span class="dropdown-name">Homework</span>
+						<span class="badge-alert 
+							<% if(user.blinker.homework){ %>
+								blink
+							<% } %>
+						"><i class="fas fa-paw"></i></span>
+					</h2>
+				</div>
+				<div class="dropdown-content" id="homework-content">
+					<textarea class="dropdown-message" name="profile[homework]" disabled><%= user.profile.homework %></textarea>
+				</div>
+			</div>
+
+			<div class="entire-dropdown">
+				<div class="profile-dropdown" id="next-lesson-button">
+					<h2 class="dropdown-title">
+						<span class="dropdown-name">Next Lesson Prep/Location</span>
+						<span class="badge-alert 
+							<% if(user.blinker.nextLesson){ %>
+								blink
+							<% } %>
+						"><i class="fas fa-paw"></i></span>
+					</h2>
+				</div>
+				<div class="dropdown-content" id="next-lesson-content">
+					<textarea class="dropdown-message" name="profile[nextLesson]" disabled><%= user.profile.nextLesson %></textarea>
+				</div>
+			</div>
+
+			<div class="entire-dropdown">
+				<div class="profile-dropdown" id="evaluations-button">
+					<h2 class="dropdown-title">
+						<span class="dropdown-name">Evaluations</span>
+						<span class="badge-alert 
+							<% if(user.blinker.evaluations){ %>
+								blink
+							<% } %>
+						"><i class="fas fa-paw"></i></span>
+					</h2>
+				</div>
+				<div class="dropdown-content" id="evaluations-content">
+					<textarea class="dropdown-message" name="profile[evaluations]" disabled><%= user.profile.evaluations %></textarea>
+				</div>
+			</div>
+
+			<div class="entire-dropdown">
+				<div class="profile-dropdown" id="vaccinations-button">
+					<h2 class="dropdown-title">
+						<span class="dropdown-name">Vaccinations</span>
+						<span class="badge-alert 
+							<% if(user.blinker.vaccinations){ %>
+								blink
+							<% } %>
+						"><i class="fas fa-paw"></i></span>
+					</h2>
+				</div>
+				<div class="dropdown-content" id="vaccinations-content">
+					<textarea class="dropdown-message" name="profile[vaccinations]" disabled><%= user.profile.vaccinations %></textarea>
+				</div>
+			</div>
+		</form>
 	</div>
-
-	<div id="user-id"><%= user.id %></div>
-
-	<form action="/profile/<%= user.id %>?_method=PUT" method="post">
-		<% if(currentUser.isAdmin === true) { %>
-			<div class="admin-only">
-				<button id="admin-save-btn" class="admin-btn admin-save" type="submit">Save</button>
-				<p id="admin-cancel-btn" class="admin-btn admin-cancel">Cancel</p>
-				<p id="admin-edit-btn" class="admin-btn admin-edit">Edit Admin Information</p>
-				<p id="admin-directions">Hit save once you have finished editing otherwise your updates will not be saved in database!</p>
-			</div>
-		<% } %>
-		<div class="entire-dropdown">
-			<div class="profile-dropdown" id="progress-button">
-				<h2 class="dropdown-title">
-					<span class="dropdown-name">Progress</span>
-					<span class="badge-alert 
-						<% if(user.blinker.progress){ %>
-							blink
-						<% } %>
-					"><i class="fas fa-paw"></i></span>
-				</h2>
-			</div>
-			<div class="dropdown-content" id="progress-content">
-				<textarea class="dropdown-message" name="profile[progress]" disabled><%= user.profile.progress %></textarea>
-			</div>
-		</div>
-
-		<div class="entire-dropdown">
-			<div class="profile-dropdown" id="homework-button">
-				<h2 class="dropdown-title">
-					<span class="dropdown-name">Homework</span>
-					<span class="badge-alert 
-						<% if(user.blinker.homework){ %>
-							blink
-						<% } %>
-					"><i class="fas fa-paw"></i></span>
-				</h2>
-			</div>
-			<div class="dropdown-content" id="homework-content">
-				<textarea class="dropdown-message" name="profile[homework]" disabled><%= user.profile.homework %></textarea>
-			</div>
-		</div>
-
-		<div class="entire-dropdown">
-			<div class="profile-dropdown" id="next-lesson-button">
-				<h2 class="dropdown-title">
-					<span class="dropdown-name">Next Lesson Prep/Location</span>
-					<span class="badge-alert 
-						<% if(user.blinker.nextLesson){ %>
-							blink
-						<% } %>
-					"><i class="fas fa-paw"></i></span>
-				</h2>
-			</div>
-			<div class="dropdown-content" id="next-lesson-content">
-				<textarea class="dropdown-message" name="profile[nextLesson]" disabled><%= user.profile.nextLesson %></textarea>
-			</div>
-		</div>
-
-		<div class="entire-dropdown">
-			<div class="profile-dropdown" id="evaluations-button">
-				<h2 class="dropdown-title">
-					<span class="dropdown-name">Evaluations</span>
-					<span class="badge-alert 
-						<% if(user.blinker.evaluations){ %>
-							blink
-						<% } %>
-					"><i class="fas fa-paw"></i></span>
-				</h2>
-			</div>
-			<div class="dropdown-content" id="evaluations-content">
-				<textarea class="dropdown-message" name="profile[evaluations]" disabled><%= user.profile.evaluations %></textarea>
-			</div>
-		</div>
-
-		<div class="entire-dropdown">
-			<div class="profile-dropdown" id="vaccinations-button">
-				<h2 class="dropdown-title">
-					<span class="dropdown-name">Vaccinations</span>
-					<span class="badge-alert 
-						<% if(user.blinker.vaccinations){ %>
-							blink
-						<% } %>
-					"><i class="fas fa-paw"></i></span>
-				</h2>
-			</div>
-			<div class="dropdown-content" id="vaccinations-content">
-				<textarea class="dropdown-message" name="profile[vaccinations]" disabled><%= user.profile.vaccinations %></textarea>
-			</div>
-		</div>
-	</form>
 </div>
-
 
 <script type="text/javascript" src="/scripts/profile.js"></script>
 

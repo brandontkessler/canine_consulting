@@ -1,0 +1,29 @@
+/* NON-TIFFANY BLUE: #77d2ca OR rgba(119, 210, 202, 1) */
+
+.background-404 {
+	overflow: hidden;
+	background-image: url('https://i.imgur.com/581BdRu.jpg');
+	background-size: cover;
+	height: calc(100vh - 40px - 60px);
+	background-position: left 0 top 50%;
+}
+
+.content {
+	width: 80%;
+	text-align: center;
+	color: rgba(119, 210, 202, 1);
+	margin: 50px auto 0 auto;
+	font-size: 4em;
+}
+
+@media screen and (max-width: 43.75em){
+	.content {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 34.375em){
+	.background-404 {
+		background-position: left 25% top 50%;
+	}
+}

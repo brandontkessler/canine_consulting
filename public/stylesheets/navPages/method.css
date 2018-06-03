@@ -13,7 +13,7 @@
 
 .blurb-intro {
 	width: 90%;
-	margin: 0 auto 0 auto;
+	margin: 20px auto 0 auto;
 	padding-top: 30px;
 	color: white;
 	padding-bottom: 20px;
@@ -34,8 +34,8 @@
     background-color: rgba(119, 210, 202, 1);
     color: rgba(119, 210, 202, 1);
     height: 2px;
-    width: 90%;
-    margin: 0 auto 30px auto; 
+    width: 70%;
+    margin: 20px auto 30px auto; 
 }
 
 .learn-more {
