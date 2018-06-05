@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	font-family: 'Merriweather', serif;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -179,7 +180,7 @@ body {
 		-webkit-transition: opacity 0.5s ease-out;
 		-o-transition: opacity 0.5s ease-out;
 		transition: opacity 0.5s ease-out;
-		display: none;	
+		display: none;
 	}
 }
 
@@ -210,5 +211,3 @@ body {
 	background-color: rgba(139, 183, 121, 1);
 	color: white;
 }
-
-

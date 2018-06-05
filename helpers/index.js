@@ -74,7 +74,7 @@ exports.classesContactSubmit = (req, res) => {
 	if(captcha === undefined || captcha === '' || captcha === null){
 		req.flash('error', `Prove you're a hooman, select the reCaptcha`)
 		return res.redirect('back');
-	}	
+	}
 
 	request(verifyUrl, (err, response, body) => {
 		body = JSON.parse(body);
@@ -111,6 +111,47 @@ exports.classesContactSubmit = (req, res) => {
 				return res.redirect('back')
 			}
 			req.flash('success', `Thank you hooman! Your message has been sent`)
+			return res.redirect('back');
+		});
+	})
+}
+
+// JOIN TEAM CONTACT FORM
+exports.joinTeamContact = (req, res) => {
+	let captchaResponse = 'g-recaptcha-response',
+			captcha = req.body[captchaResponse],
+			secretKey = process.env.SECRET_KEY,
+			verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}&remoteip=${req.connection.remoteAddress}`,
+			joinTeam = req.body.joinTeam;
+
+	if(captcha === undefined || captcha === '' || captcha === null){
+		req.flash('error', `Prove you're a hooman, select the reCaptcha`)
+		return res.redirect('back');
+	}
+
+	request(verifyUrl, (err, response, body) => {
+		body = JSON.parse(body);
+
+		if(body.success !== undefined && !body.success){
+			req.flash('error', 'Hooman verification failed.. Please try the reCaptcha again.')
+			return res.redirect('back');
+		}
+
+		let joinTeamOptions = {
+			to: 'paws.wendy@gmail.com',
+			from: 'Canine Consulting DO NOT REPLY',
+			subject: 'Join Team Submission',
+			text: `${joinTeam.name} wants to join the team!
+						Here is their message: ${joinTeam.content}
+						Contact ${joinTeam.name} at ${joinTeam.contact}`
+		}
+
+		mailer.transporter.sendMail(joinTeamOptions, (error, info) => {
+			if(error){
+				console.log(error);
+				return res.redirect('back')
+			}
+			req.flash('success', `Thank you hooman! We will contact you soon`)
 			return res.redirect('back');
 		});
 	})

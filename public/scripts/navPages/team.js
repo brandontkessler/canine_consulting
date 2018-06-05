@@ -25,13 +25,19 @@ const wendyHeight = wendyInfo.clientHeight,
 	  		accessDOM: erikaInfo,
 	  		'see-more-erika': erikaHeight
 	  	},
-		'moira-info': {
-			accessDOM: moiraInfo,
-			'see-more-moira': moiraHeight
-		}
+			'moira-info': {
+				accessDOM: moiraInfo,
+				'see-more-moira': moiraHeight
+			}
 	  };
 
 let teamArray = [wendyInfo, brandonInfo, erikaInfo, moiraInfo];
+
+// Grab join team popup stuff
+const 	popupBtn = document.querySelector('#join-team-btn'),
+				popupBg = document.querySelector('#join-team-popup-bg'),
+				popupForm = document.querySelector('#join-team-popup'),
+				joinTeamCancel = document.querySelector('.join-team-cancel');
 
 // Add the teammate-info-content class to shrink the description height to 75px lines if window width is 1115px (same as css)
 if(window.innerWidth <= 1115) {
@@ -60,3 +66,12 @@ for (let button of seeMoreButton) {
 	})
 }
 
+// Join team popup logic
+popupBtn.addEventListener('click', () => popupBg.style.display = "block")
+joinTeamCancel.addEventListener('click', () => popupBg.style.display = "none")
+
+document.querySelector('*').addEventListener('click', (e) => {
+	if(e.target === popupBg){
+		popupBg.style.display = "none"
+	}
+})

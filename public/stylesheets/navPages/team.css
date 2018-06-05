@@ -6,13 +6,107 @@
 	padding-top: 20px;
 	margin-bottom: -19px;
 	height: 2000px;
-	overflow-x: hidden;
 	width: 100vw;
 }
 
 .team-container {
 	width: 80%;
 	margin: 0 auto;
+}
+
+#join-team-btn {
+	width: 200px;
+	text-align: center;
+	border: 2px solid rgba(119, 210, 202, 1);
+	color: rgba(119, 210, 202, 1);
+	background-color: white;
+	margin: 0 auto;
+	padding: 10px 5px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#join-team-btn:hover {
+	border: 2px solid white;
+	color: white;
+	background-color: rgba(119, 210, 202, 1);
+}
+
+#join-team-popup-bg {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+	display: none;
+}
+
+#join-team-popup {
+	width: 500px;
+	position: fixed;
+	top: 20vh;
+	min-height: 250px;
+	max-height: 450px;
+	left: calc(50% - 255px);
+	background-color: white;
+	border: 5px solid rgba(119, 210, 202, 1);
+	overflow: auto;
+	border-radius: 10px;
+}
+
+#join-team-popup h4 {
+	text-align: center;
+	font-size: 1.4em;
+}
+
+.join-team-form {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.join-team-input {
+	width: 100%;
+	box-sizing: border-box;
+	resize: none;
+	margin: 5px 0;
+	padding: 10px 5px;
+	border: 2px solid rgba(119, 210, 202, 1);
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+.g-recaptcha {
+	-webkit-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	        transform: scale(0.8);
+}
+
+.join-team-send {
+	background-color: rgba(119, 210, 202, 1);
+	color: white;
+	font-weight: bold;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.join-team-send:hover {
+	opacity: 0.7;
+}
+
+.join-team-cancel {
+	background-color: gray;
+	color: white;
+	text-align: center;
+	border: 2px solid gray;
+	cursor: pointer;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+}
+
+.join-team-cancel:hover {
+	opacity: 0.7;
 }
 
 .teammate-container {
@@ -132,7 +226,7 @@
 	}
 
 	.see-more-button-right {
-		margin-left: calc(100% - 100px);	
+		margin-left: calc(100% - 100px);
 	}
 }
 
@@ -176,6 +270,15 @@
 	.teammate h4 {
 		font-size: 1em;
 	}
+
+	#join-team-popup {
+		width: 350px;
+		left: calc(50% - 360px/2)
+	}
+
+	.join-team-form {
+		width: 90%;
+	}
 }
 
 @media screen and (max-width: 28.5em){
@@ -188,5 +291,14 @@
 	.teammate h4 {
 		font-size: 0.8em;
 		text-align: left;
+	}
+
+	#join-team-popup {
+		width: 250px;
+		left: calc(50% - 260px/2)
+	}
+
+	.join-team-form {
+		width: 95%;
 	}
 }

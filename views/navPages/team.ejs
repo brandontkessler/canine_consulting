@@ -2,24 +2,39 @@
 
 	<title>Canine Consulting Team Page</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/navPages/team.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 <% include ../partials/navbar %>
 
 	<div class="team-background">
 		<div class="team-container">
+			<p id="join-team-btn">Join our Team</p>
+			<div id="join-team-popup-bg">
+				<div id="join-team-popup">
+					<h4>Join Our Team</h4>
+					<form class="join-team-form" action="/join_team_contact" method="post">
+						<input class="join-team-input" type="text" name="joinTeam[name]" placeholder="name" required>
+						<input class="join-team-input" type="text" name="joinTeam[contact]" placeholder="email or phone #" required>
+						<textarea class="join-team-input" rows=5 name="joinTeam[content]" placeholder="anything you'd like to add..."></textarea>
+						<div class="g-recaptcha" data-sitekey="6Le5iloUAAAAAK6R_WR2vqqej6cM987NTYQjXe8y"></div>
+						<button class="join-team-input join-team-send">Send</button>
+						<p class="join-team-input join-team-cancel">Cancel</p>
+					</form>
+				</div>
+			</div>
 			<div class="teammate-container">
 
 				<div class="teammate">
 					<div class="teammate-header">
 						<img class="wendy-image image-left" src="https://i.imgur.com/7fJRInp.jpg">
-						<div class="wendy-left">	
+						<div class="wendy-left">
 							<h3>Wendy</h3>
 							<h4>FOUNDER + BEHAVIORIST</h4>
 						</div>
 					</div>
 					<p class="teammate-content" id="wendy-info">
-						Since her childhood, Wendy has been immersed in the world of dog training, wolf studies, dog shows, and canine behaviors. She has over a decade of experience with dog behavior, canine health, and canine research (including research at UC Davis, Yellowstone National Park, and zoology). Wendy uses the same teaching methodology as Dr. Ian Dunbar, world-renowned dog behaviorist and veterinarian, and hopes to close the rift in dog training methods by teaching a scientific methodology in training their dogs, relying on empathy, respect, and open communication. Some notable organizations that she has worked with include San Diego Zoo, Los Angeles Supreme Court judges, Miami Police Department, AKC, Pet Partners, Guide Dogs of America, and many more. Her scope of experience in different types of behavior and training has given her high success rates with all of her students. The devotion and passion she has for pet care goes beyond dogs, and it’s her personal mission to make sure her footprint leaves a positive impact on all canine-human relationships. Her non-animal background includes an extensive background in healthcare, business consulting, and analytics. 
+						Since her childhood, Wendy has been immersed in the world of dog training, wolf studies, dog shows, and canine behaviors. She has over a decade of experience with dog behavior, canine health, and canine research (including research at UC Davis, Yellowstone National Park, and zoology). Wendy uses the same teaching methodology as Dr. Ian Dunbar, world-renowned dog behaviorist and veterinarian, and hopes to close the rift in dog training methods by teaching a scientific methodology in training their dogs, relying on empathy, respect, and open communication. Some notable organizations that she has worked with include San Diego Zoo, Los Angeles Supreme Court judges, Miami Police Department, AKC, Pet Partners, Guide Dogs of America, and many more. Her scope of experience in different types of behavior and training has given her high success rates with all of her students. The devotion and passion she has for pet care goes beyond dogs, and it’s her personal mission to make sure her footprint leaves a positive impact on all canine-human relationships. Her non-animal background includes an extensive background in healthcare, business consulting, and analytics.
 						<p class="see-more see-more-button-right" id="see-more-wendy">Read more</p>
-					</p>			
+					</p>
 				</div>
 
 				<hr class="team-separate">
@@ -27,7 +42,7 @@
 				<div class="teammate">
 					<div class="teammate-header">
 						<img class="teammate-image image-right" src="https://i.imgur.com/HoddCsw.jpg">
-						<div class="teammate-right">	
+						<div class="teammate-right">
 							<h3>Moira</h3>
 							<h4>EXECUTIVE RETAIL + CUSTOMER SERVICE</h4>
 						</div>
@@ -43,7 +58,7 @@
 				<div class="teammate">
 					<div class="teammate-header">
 						<img class="teammate-image image-left" src="https://i.imgur.com/M8yu4xq.jpg">
-						<div class="teammate-left">	
+						<div class="teammate-left">
 							<h3>Erika</h3>
 							<h4>EXECUTIVE COUNSELOR</h4>
 						</div>
@@ -59,7 +74,7 @@
 				<div class="teammate">
 					<div class="teammate-header">
 						<img class="teammate-image image-right" src="https://i.imgur.com/o3WZCCb.jpg">
-						<div class="teammate-right">	
+						<div class="teammate-right">
 							<h3>Brandon</h3>
 							<h4>TECHNOLOGY CONSULTANT</h4>
 						</div>
@@ -67,9 +82,9 @@
 					<p class="teammate-content" id="brandon-info">
 						From Cocker Spaniels, to Rhodesian Ridgebacks, Brandon has never lived a moment of his life without a canine companion. A native to Southern California, Brandon has merged his business career development, and entrepreneurial strategies to help the pet industry promote small businesses, especially in dog care. In his free time, he can often be found with his new German Shepherd puppy at the dog beach and hiking trails in his neighborhood. Brandon joined the CCG team because he believes there’s a gap of business understanding in many dog loving business owners, and he wants to successfully guide each business owner to their full potential. His non-animal background includes coding, financial planning, and senior level analytics.
 						<p class="see-more see-more-button-left" id="see-more-brandon">Read more</p>
-					</p>		
+					</p>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>

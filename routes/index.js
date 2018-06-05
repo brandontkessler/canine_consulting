@@ -32,6 +32,10 @@ router.get('/schedule', (req, res) => res.render('navPages/schedule'));
 router.route('/trainer_contact')
 	.post(helpers.classesContactSubmit)
 
+// JOIN TEAM Contact
+router.route('/join_team_contact')
+	.post(helpers.joinTeamContact)
+
 // PROFILE
 router.route('/profile/:id')
 	.get(middleware.isLoggedIn, middleware.isProfileOwner, profileHelpers.userProfile)
